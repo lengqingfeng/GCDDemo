@@ -28,9 +28,9 @@ int x = 10;
 {
     [super viewDidLoad];
     
-    NSLog(@"studen");
+ // GCD 相关函数说明
     
-//    dispatch_get_main_queue();
+ //    dispatch_get_main_queue();
 //    dispatch_async 函数会将传入的block块放入指定的queue里运行。这个函数是异步的，这就意味着它会立即返回而不管block是否运行结束。因此，我们可以在block里运行各种耗时的操作（如网络请求） 而同时不会阻塞UI线程。
 //    dispatch_get_global_queue 会获取一个全局队列，我们姑且理解为系统为我们开启的一些全局线程。我们用priority指定队列的优先级，而flag作为保留字段备用（一般为0）。
 //    dispatch_get_main_queue 会返回主队列，也就是UI队列。它一般用于在其它队列中异步完成了一些工作后，需要在UI队列中更新界面（比如上面代码中的[self updateUIWithResult:result]）的情况。
@@ -51,7 +51,7 @@ int x = 10;
     //获取主队列 全局
   //  dispatch_queue_t mainQueue = dispatch_get_main_queue();
     
-    NSLog(@"block=========%d",block(3));
+
     stringBlock("adc","cba");
     
     blockme();
